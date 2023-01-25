@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.27)  23 JAN 2023 13:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.27)  25 JAN 2023 14:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -790,7 +790,7 @@ File: ./images//graf1.png Graphic file (type png)
 Package pdftex.def Info: ./images//graf1.png  used on input line 748.
 (pdftex.def)             Requested size: 216.40878pt x 149.35818pt.
  [6 <./images//graf1.png>] [7] [8] [9]
-Underfull \hbox (badness 4647) in paragraph at lines 973--978
+Underfull \hbox (badness 4647) in paragraph at lines 975--980
 \T1/lmr/m/it/10 Mnoºico pro-fi-lov stra-te-gij ozna-£imo s $\OML/lmm/m/it/10 S \OT1/lmr/m/n/10 = \OML/lmm/m/it/10 S[] \OMS/lmsy/m/n/10 ^^B \OML/lmm/m/it/10 S[]$ \T1/lmr/m/it/10 in imamo to-rej igro $\OT1/lmr/m/n/10 ^^@ =
  []
 
@@ -798,118 +798,118 @@ Underfull \hbox (badness 4647) in paragraph at lines 973--978
 <./images//graf2.png, id=75, 291.0875pt x 238.8925pt>
 File: ./images//graf2.png Graphic file (type png)
 <use ./images//graf2.png>
-Package pdftex.def Info: ./images//graf2.png  used on input line 1447.
+Package pdftex.def Info: ./images//graf2.png  used on input line 1449.
 (pdftex.def)             Requested size: 232.8703pt x 191.11424pt.
  [17] [18 <./images//graf2.png>] [19] [20] [21]
 
-Package tcolorbox Warning: Using nobreak failed. Try to enlarge `lines before break' or set page breaks manually on input line 1661.
+Package tcolorbox Warning: Using nobreak failed. Try to enlarge `lines before break' or set page breaks manually on input line 1663.
 
 [22] [23] [24] [25] [26] [27] [28] [29]
 <./images//drevo_1.png, id=119, 267.49937pt x 152.57pt>
 File: ./images//drevo_1.png Graphic file (type png)
 <use ./images//drevo_1.png>
-Package pdftex.def Info: ./images//drevo_1.png  used on input line 2240.
+Package pdftex.def Info: ./images//drevo_1.png  used on input line 2242.
 (pdftex.def)             Requested size: 200.62402pt x 114.42722pt.
 <./images//drevo_2.png, id=121, 534.49687pt x 176.15813pt>
 File: ./images//drevo_2.png Graphic file (type png)
 <use ./images//drevo_2.png>
-Package pdftex.def Info: ./images//drevo_2.png  used on input line 2253.
+Package pdftex.def Info: ./images//drevo_2.png  used on input line 2255.
 (pdftex.def)             Requested size: 347.41884pt x 114.50142pt.
  [30 <./images//drevo_1.png>]
 <./images//drevo_3.png, id=126, 359.84438pt x 268.00125pt>
 File: ./images//drevo_3.png Graphic file (type png)
 <use ./images//drevo_3.png>
-Package pdftex.def Info: ./images//drevo_3.png  used on input line 2276.
+Package pdftex.def Info: ./images//drevo_3.png  used on input line 2278.
 (pdftex.def)             Requested size: 215.90828pt x 160.80197pt.
  [31 <./images//drevo_2.png> <./images//drevo_3.png>]
 <./images//drevo_4.png, id=132, 187.19937pt x 187.19937pt>
 File: ./images//drevo_4.png Graphic file (type png)
 <use ./images//drevo_4.png>
-Package pdftex.def Info: ./images//drevo_4.png  used on input line 2300.
+Package pdftex.def Info: ./images//drevo_4.png  used on input line 2302.
 (pdftex.def)             Requested size: 131.03867pt x 131.03867pt.
  [32 <./images//drevo_4.png>]
 <./images//drevo_5.png, id=138, 310.15875pt x 189.70876pt>
 File: ./images//drevo_5.png Graphic file (type png)
 <use ./images//drevo_5.png>
-Package pdftex.def Info: ./images//drevo_5.png  used on input line 2332.
+Package pdftex.def Info: ./images//drevo_5.png  used on input line 2334.
 (pdftex.def)             Requested size: 217.10963pt x 132.79521pt.
 <./images//drevo_6.png, id=139, 540.0175pt x 157.58875pt>
 File: ./images//drevo_6.png Graphic file (type png)
 <use ./images//drevo_6.png>
-Package pdftex.def Info: ./images//drevo_6.png  used on input line 2354.
+Package pdftex.def Info: ./images//drevo_6.png  used on input line 2356.
 (pdftex.def)             Requested size: 324.013pt x 94.55397pt.
  [33 <./images//drevo_5.png> <./images//drevo_6.png>]
-LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 2427.
+LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 2429.
  (C:\Program Files\MiKTeX\tex/latex/lm\ot1lmss.fd
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [34] [35]
 <./images//drevo_7.png, id=150, 262.9825pt x 205.76875pt>
 File: ./images//drevo_7.png Graphic file (type png)
 <use ./images//drevo_7.png>
-Package pdftex.def Info: ./images//drevo_7.png  used on input line 2470.
+Package pdftex.def Info: ./images//drevo_7.png  used on input line 2472.
 (pdftex.def)             Requested size: 210.38626pt x 164.6152pt.
  [36 <./images//drevo_7.png>]
 <./images//drevo_8.png, id=154, 478.28688pt x 261.47687pt>
 File: ./images//drevo_8.png Graphic file (type png)
 <use ./images//drevo_8.png>
-Package pdftex.def Info: ./images//drevo_8.png  used on input line 2567.
+Package pdftex.def Info: ./images//drevo_8.png  used on input line 2569.
 (pdftex.def)             Requested size: 334.79852pt x 183.03255pt.
 <./images//drevo_9.png, id=155, 431.11063pt x 233.87375pt>
 File: ./images//drevo_9.png Graphic file (type png)
 <use ./images//drevo_9.png>
-Package pdftex.def Info: ./images//drevo_9.png  used on input line 2587.
+Package pdftex.def Info: ./images//drevo_9.png  used on input line 2589.
 (pdftex.def)             Requested size: 301.77536pt x 163.71048pt.
  [37 <./images//drevo_8.png>] [38 <./images//drevo_9.png>]
 <images/slika4.png, id=163, 633.36626pt x 262.9825pt>
 File: images/slika4.png Graphic file (type png)
 <use images/slika4.png>
-Package pdftex.def Info: images/slika4.png  used on input line 2669.
+Package pdftex.def Info: images/slika4.png  used on input line 2671.
 (pdftex.def)             Requested size: 443.35336pt x 184.08649pt.
  [39 <./images/slika4.png>]
 <images/slika5.png, id=167, 303.1325pt x 238.39063pt>
 File: images/slika5.png Graphic file (type png)
 <use images/slika5.png>
-Package pdftex.def Info: images/slika5.png  used on input line 2710.
+Package pdftex.def Info: images/slika5.png  used on input line 2712.
 (pdftex.def)             Requested size: 303.13176pt x 238.39003pt.
  [40 <./images/slika5.png>]
 <images/slika6.png, id=171, 579.16376pt x 268.50313pt>
 File: images/slika6.png Graphic file (type png)
 <use images/slika6.png>
-Package pdftex.def Info: images/slika6.png  used on input line 2765.
+Package pdftex.def Info: images/slika6.png  used on input line 2767.
 (pdftex.def)             Requested size: 347.50093pt x 161.1031pt.
 <images/slika7.png, id=172, 301.62688pt x 251.43938pt>
 File: images/slika7.png Graphic file (type png)
 <use images/slika7.png>
-Package pdftex.def Info: images/slika7.png  used on input line 2772.
+Package pdftex.def Info: images/slika7.png  used on input line 2774.
 (pdftex.def)             Requested size: 241.30182pt x 201.15176pt.
  [41] [42 <./images/slika6.png> <./images/slika7.png>] [43] [44] [45] [46] [47] [48]
 <images/slika1.png, id=199, 540.0175pt x 203.25937pt>
 File: images/slika1.png Graphic file (type png)
 <use images/slika1.png>
-Package pdftex.def Info: images/slika1.png  used on input line 3238.
+Package pdftex.def Info: images/slika1.png  used on input line 3240.
 (pdftex.def)             Requested size: 324.013pt x 121.95656pt.
 <images/slika2.png, id=200, 332.74312pt x 232.87pt>
 File: images/slika2.png Graphic file (type png)
 <use images/slika2.png>
-Package pdftex.def Info: images/slika2.png  used on input line 3244.
+Package pdftex.def Info: images/slika2.png  used on input line 3246.
 (pdftex.def)             Requested size: 266.19484pt x 186.29623pt.
  [49 <./images/slika1.png> <./images/slika2.png>]
 <images/slika3.png, id=205, 330.73563pt x 239.89626pt>
 File: images/slika3.png Graphic file (type png)
 <use images/slika3.png>
-Package pdftex.def Info: images/slika3.png  used on input line 3263.
+Package pdftex.def Info: images/slika3.png  used on input line 3265.
 (pdftex.def)             Requested size: 264.58884pt x 191.91725pt.
  [50 <./images/slika3.png>] [51] [52] [53] [54] (tizapiski.aux) ) 
 Here is how much of TeX's memory you used:
- 35619 strings out of 478582
- 874825 string characters out of 2854159
+ 35618 strings out of 478582
+ 874808 string characters out of 2854159
  1396125 words of memory out of 3000000
- 53144 multiletter control sequences out of 15000+600000
+ 53143 multiletter control sequences out of 15000+600000
  549696 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,18n,133p,797b,1220s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc} <C:\Users\galfi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/bbold/dpi600\bbold10.pk>{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}<C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmri7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tizapiski.pdf (54 pages, 737592 bytes).
+Output written on tizapiski.pdf (54 pages, 737507 bytes).
 PDF statistics:
  317 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

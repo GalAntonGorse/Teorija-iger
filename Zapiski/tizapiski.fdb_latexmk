@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1674476326 "c:/Users/galfi/Documents/Fakulteta/Semester_5/Teorija_iger/Zapiski/tizapiski.tex" "tizapiski.pdf" "tizapiski" 1674476331
+["pdflatex"] 1674654506 "c:/Users/galfi/Documents/Fakulteta/Semester_5/Teorija_iger/Zapiski/tizapiski.tex" "tizapiski.pdf" "tizapiski" 1674654511
   "C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc" 1254938640 2375 baa924870cfb487815765f9094cf3728 ""
   "C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc" 1254938640 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc" 1254938640 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -278,7 +278,7 @@
   "C:/Users/galfi/AppData/Local/MiKTeX/fonts/tfm/public/bbold/bbold7.tfm" 1669104561 788 cfc6f7349e03ca366560917be88c2027 ""
   "C:/Users/galfi/AppData/Local/MiKTeX/fonts/tfm/public/bbold/bbold8.tfm" 1669104557 768 b3927d32cc38bf306f676b7e9ddf7414 ""
   "C:/Users/galfi/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1656343937 10237146 806d2997e4269065d895cffb7d5c7e2c ""
-  "c:/Users/galfi/Documents/Fakulteta/Semester_5/Teorija_iger/Zapiski/tizapiski.tex" 1674476326 151921 8615d7234660dbc47c382f683821cedc ""
+  "c:/Users/galfi/Documents/Fakulteta/Semester_5/Teorija_iger/Zapiski/tizapiski.tex" 1674654500 151964 8982169c1e04dc45986a04769d46f886 ""
   "images//drevo_1.png" 1671983053 9776 c9c8ed454469852258d8187581476bce ""
   "images//drevo_2.png" 1671812537 13449 88508aec142bd0afb04505530e15bceb ""
   "images//drevo_3.png" 1670243196 17379 9f1f37a097fe505afbeec4463459dfc5 ""
@@ -297,8 +297,8 @@
   "images/slika5.png" 1674402383 9434 4aab0e7e9980cbccd43f6cbbfa7deb86 ""
   "images/slika6.png" 1674410784 21823 086def9fec64a55000a44899a5f85192 ""
   "images/slika7.png" 1674410669 11886 de1e281a0ed9725eff4e3ad032fd6502 ""
-  "tizapiski.aux" 1674476331 4733 d9e4fd8cfdf89bd90b120b5d3bb139c9 "pdflatex"
-  "tizapiski.tex" 1674476326 151921 8615d7234660dbc47c382f683821cedc ""
+  "tizapiski.aux" 1674654510 4852 23f8de4378a57f86669908fd1c46ff64 "pdflatex"
+  "tizapiski.tex" 1674654500 151964 8982169c1e04dc45986a04769d46f886 ""
   (generated)
   "tizapiski.aux"
   "tizapiski.log"
