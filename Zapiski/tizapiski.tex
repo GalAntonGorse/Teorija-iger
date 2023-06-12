@@ -118,7 +118,7 @@
   coltext=black,
   colback=white, 
   fontupper=\rmfamily,
-  parbox=false,
+  %parbox=false,
   noparskip,
   sharp corners,
   boxrule=-1pt,  % width of the box' edges
@@ -138,8 +138,8 @@
   ]}
 {\endtcolorbox}
 
-\newenvironment{definicija}{\begin{defi}\begin{noticeB}}{%
-    \end{noticeB}\end{defi}}
+\newenvironment{definicija}{\begin{noticeB}\begin{defi}}{%
+    \end{defi}\end{noticeB}}
 
 {\theoremstyle{remark}
 \newtheorem*{opomba}{Opomba}
@@ -181,7 +181,7 @@
   breakable,
   coltext=black, 
   fontupper=\rmfamily,
-  parbox=false,
+  %parbox=false,
   noparskip,
   sharp corners,
   boxrule=-1pt,  % width of the box' edges
@@ -941,7 +941,7 @@ $$U_1 (\pi_1, \dots, \pi_n) = \sum_{a_1 \in A_1} \pi_1 (a_1) \left(\sum_{(a_2, \
   Podobno definiramo tudi stroga Nasheva ravnovesja.
 \end{definicija}
 
-Izbira strategije za igralca $i$ je ekvivalentna ene točke v prostoru $S_i \in \Pi(A_i)$.
+Izbira strategije za igralca $i$ je ekvivalentna eni točki v prostoru $S_i = \Pi(A_i)$.
 Torej imamo preslikavo $\Phi_{\text{kor $\to$ pref}}$ iz množice iger s funkcijami koristnosti v igre s funkcijami preferenc s predpisom 
 $$(N, (A_i)_{i \in N}, (u_i)_{i \in N}) \mapsto (N, (S_i)_{i \in N}, (U_i)_{i \in N}).$$
 Rečemo, da je $\Phi_{\text{kor $\to$ pref}} (\Gamma)$ mešana razširitev igre $\Gamma$.
@@ -1062,9 +1062,9 @@ Rečemo, da je $\Phi_{\text{kor $\to$ pref}} (\Gamma)$ mešana razširitev igre 
   Dokažimo torej $(\Leftarrow)$. Naj bo $\pi^*$ profil strategij, za katero velja predpostavka \ref{eq:1}.
   Fiksiramo $i \in N$ ter $\pi_i \in S_i$. Potem je 
   \begin{align*}
-    U(\pi^*\ |\ \pi_i) &= \sum_{a_i \in A_i} \pi (a_i) U_i (\pi^*\ |\ \delta(a_i))\\
-    &= \sum_{a_i \in A_i} \pi_i (a_i) U_i (\pi^*)\\
-    &= U(\pi^*) \sum_{a_i \in A_i} \pi_i(a_i) = U(\pi^*). \qedhere
+    U_i(\pi^*\ |\ \pi_i) &= \sum_{a_i \in A_i} \pi_i (a_i) U_i (\pi^*\ |\ \delta(a_i))\\
+    &\leq \sum_{a_i \in A_i} \pi_i (a_i) U_i (\pi^*)\\
+    &= U_i(\pi^*) \sum_{a_i \in A_i} \pi_i(a_i) = U_i(\pi^*). \qedhere
   \end{align*}
 \end{dokaz}
 
