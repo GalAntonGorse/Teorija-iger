@@ -511,7 +511,7 @@ Takrat se bodo akcije igralcev "`ustalile"' pri Nashevem ravnovesju, če ta obst
   $A = \prod_{i \in N} A_i$ množica profilov akcij. Najboljši odgovor igralca $i \in N$
   je preslikava $B_i: A \to 2^{A_i}$ s predpisom 
   \begin{align*}
-    \alpha &\mapsto \left\lbrace b_i \in A_i \big| u_i (a | b_i) \geq u_i (a | c_i),\ \forall c_i \in A_i \right\rbrace\\
+    a &\mapsto \left\lbrace b_i \in A_i \big| u_i (a | b_i) \geq u_i (a | c_i),\ \forall c_i \in A_i \right\rbrace\\
     &= \{b_i \in A_i \big| u_i (a | b_i) = \max_{c_i \in A_i} u_i (a | c_i)\}.
   \end{align*}
 \end{definicija}
@@ -1107,10 +1107,10 @@ Za preverjanje, ali je kandidat $\pi^*$ Nashevo ravnovesje, moramo preveriti le 
   \begin{align*}
     U_i (\pi^*) &= \sum_{a_i \in A_i} \pi^*_i (a_i) U_i (\pi^*\ |\ \delta(a_i))\\
     &= \pi^*_i (b_i) U_i (\pi^*\ |\ \delta(b_i)) + \sum_{a_i \in A_i \setminus \{b_i\}}\pi^*_i (a_i) U_i (\pi^*\ |\ \delta(a_i))\\
-    &> \pi^*_i (b_i) U(\pi^*) + \sum_{a_i \in A_i \setminus \{b_i\}}\pi^*_i (a_i) U_i (\pi^*)\\
+    &< \pi^*_i (b_i) U_i(\pi^*) + \sum_{a_i \in A_i \setminus \{b_i\}}\pi^*_i (a_i) U_i (\pi^*)\\
     &= U_i (\pi^*) \sum_{a_i \in A_i} \pi_i ^* (a_i) = U_i (\pi^*).
   \end{align*}
-  Torej smo dobili $U_i (\pi^*) > U_i (\pi^*)$, protislovje.
+  Torej smo dobili $U_i (\pi^*) < U_i (\pi^*)$, protislovje.
 \end{dokaz}
 
 Princip indiferentnosti uporabimo za iskanje kandidatov za Nashevo ravnovesje, nato pa uporabimo 
@@ -1503,7 +1503,7 @@ $$v_2 = \max_{q \in S_2} \min_{p \in S_1} p^\top B q.$$
 \end{trditev}
 
 \begin{dokaz}
-  Za $\forall p \in S_2$ velja $\min_{q \in S_2} p^\top A q = \min_{q \in S_2} \sum_{j \in [n]} [p^\top A]_j = \min_{j \in [n]} [p^\top A]_j$.
+  Za $\forall p \in S_2$ velja $\min_{q \in S_2} p^\top A q = \min_{q \in S_2} \sum_{j \in [n]} q_j [p^\top A]_j = \min_{j \in [n]} [p^\top A]_j$.
 \end{dokaz}
 
 \begin{definicija}
@@ -1592,67 +1592,69 @@ LP problem je:
 
 Stopnja varnosti v bimatričnih igrah je, kot smo že povedali, LP problem.
 Pri iskanju maksimuma $v_1 = \max_{p \in S_1} \min_{j \in [n]} [p^\top A]_j$ je torej
-v resnici iščemo $$\max \min_{j \in [n]} [p^\top A]_j$$
-pri pogojih 
-$$p_1 + p_2 + \dots + p_m = 1,\ p_1 \geq 0, p_2 \geq 0, \dots, p_m \geq 0.$$
-To pa je spet enako $\max v$ pri pogojih 
-$$[p^\top A]_j \geq v,\ p_1 + \dots + p_n = 1,\ p_1,\dots, p_n \geq 0.$$
-Matrično to zapišemo, da iščemo 
-\begin{equation} 
-  \max \begin{bmatrix}
+v resnici iščemo 
+$$
+\max \min_{j \in [n]} [p^\top A]_j \quad \textrm{pri pogojih}\quad p_1 + \dots + p_m = 1,\ p_1, \dots, p_m \geq 0.
+$$
+To je ekvivalentno LP problemu
+$$
+\max v \quad \textrm{p. p.}\quad [p^\top A]_j \geq v,\ p_1 + \dots + p_n = 1,\ p_1,\dots, p_n \geq 0,
+$$
+kar pa je nadalje ekvivalentno 
+$$
+\max \begin{bmatrix}
+    0 & \cdots & 0 & 1
+  \end{bmatrix} \cdot \begin{bmatrix}
+    p_1\\ \vdots\\ p_m\\ v
+  \end{bmatrix} \quad \textrm{p. p.}\quad A^\top p \geq v \begin{bmatrix}
+    1 \\ \vdots \\ 1
+  \end{bmatrix},\ \begin{bmatrix}
+  1 & \cdots & 1
+\end{bmatrix} p = 1,\ p_1, \dots, p_m \geq 0,\ v \in \R.
+$$
+Sedaj imamo LP problem 
+$$\max \begin{bmatrix}
   0 & \cdots & 0 & 1
 \end{bmatrix} \cdot \begin{bmatrix}
   p_1\\ \vdots\\ p_m\\ v
-\end{bmatrix}
-\label{eq:2}
-\end{equation}
-pri pogojih 
-$$A^\top p \leq -v (0, \dots, 0, 1),\ \begin{bmatrix}
-  1 & \cdots & 1
-\end{bmatrix} p = 1,\ p_1, \dots, p_m \geq 0,\ v \in \R.$$
-Definiramo $$\vec{a}^\top = \underbrace{\begin{bmatrix}
-  1 & \cdots & 1
-\end{bmatrix}}_{n},\quad \vec{b}^\top = \underbrace{\begin{bmatrix}
-  1 & \cdots & 1
-\end{bmatrix}}_{m}$$
-in sedaj imamo LP problem \eqref{eq:2} pri pogojih 
-\begin{align*}
+\end{bmatrix} \quad \textrm{p. p.}\quad
   \begin{bmatrix}
-    -A^\top & \vec{a}
+    & 1\\
+    -A^\top & \vdots\\
+    & 1
   \end{bmatrix} 
   \begin{bmatrix}
     p_1\\ \vdots \\ p_m\\ v
-  \end{bmatrix} &\leq \begin{bmatrix}
+  \end{bmatrix} \leq \begin{bmatrix}
     0 \\ \vdots \\ 0
-  \end{bmatrix}\\
+  \end{bmatrix},\
   \begin{bmatrix}
-    \vec{b}^\top & 0 
+    1 & \cdots & 1 & 0
   \end{bmatrix} \begin{bmatrix}
     p_1\\ \vdots \\ p_m\\ v
-  \end{bmatrix} &= 1
-\end{align*}
+  \end{bmatrix} = 1
+$$
 Ekvivalentno pri iskanju maxmin vrednosti za drugega igralca rešujemo LP problem 
 $$\max \begin{bmatrix}
   0 & \cdots & 0 & 1
 \end{bmatrix} \cdot \begin{bmatrix}
   q_1 \\ \vdots \\ q_n\\ u
-\end{bmatrix}$$
-pri pogojih 
-\begin{align*}
+\end{bmatrix}\quad \textrm{p. p.}\quad
   \begin{bmatrix}
-    -B & \vec{b}
+    & 1\\
+    -B & \vdots\\
+    & 1
   \end{bmatrix} 
   \begin{bmatrix}
     q_1\\ \vdots \\ q_n\\ u
-  \end{bmatrix} &\leq \begin{bmatrix}
+  \end{bmatrix} \leq \begin{bmatrix}
     0 \\ \vdots \\ 0
-  \end{bmatrix}\\
+  \end{bmatrix},\ 
   \begin{bmatrix}
-    \vec{a}^\top & 0 
+    1 & \cdots & 1 & 0 
   \end{bmatrix} \begin{bmatrix}
     q_1\\ \vdots \\ q_n\\ u
-  \end{bmatrix} &= 1
-\end{align*}.
+  \end{bmatrix} = 1.$$
 
 \subsection{Matrične igre}
 
@@ -1760,8 +1762,8 @@ Situacija je podobna kot uporaba dualnosti v linearnem programiranju.
   $$v \leq \widetilde{p}^\top A q \leq p^\top A q \leq p^\top A \widetilde{q} \leq v,$$
   torej je $p^\top A q = v.$ Sedaj pa smo dobili 
   $$\begin{cases}
-    \forall p' \in S_1:\ p'^\top Aq' \leq v
-    \forall q' \in S_2:\ p'^\top Aq' \geq v\\
+    \forall p' \in S_1:\ p'^\top Aq' \leq v\\
+    \forall q' \in S_2:\ p'^\top Aq' \geq v
   \end{cases},$$
   od koder pa sledi 
   $$\begin{cases}
@@ -2288,7 +2290,7 @@ Definirajmo funkcijo izida (outcome) $O: S \to L(T)$, ki $(S_i)_{i \in N}$ presl
 kjer se bo igra končala, če vsak igralec uporabi strategijo $S_i$.
 To pa je tudi edini list, za katerega obstaja pot od korena v $$\bigcup_{i \in N,\ v \in V(T) \setminus L(T),\ P(v) = i} S_i (v).$$
 Profil $s^* = (S_i^*)_{i \in N} \in S$ je Nashevo ravnovesje natanko tedaj, ko velja 
-$$\forall i \in N:\ \forall s_i' \in S_i:\ u_i (O((S_j^*)_{j \in N})) \geq u_i (O((S_j^*)_{j \in N}\ |\ S_i'))$$ 
+$$\forall i \in N:\ \forall s_i' \in S_i:\ u_i (O((S_j^*)_{j \in N})) \geq u_i (O((S_j^*)_{j \in N}\ |\ s_i'))$$ 
 oziroma $u_i (O(s^*)) \geq u_i (O(s^*\ |\ s_i))$. Kot v večih primerih do sedaj imamo 
 funkcijo 
 $$\Phi_{\text{eks $\to$ pref}}: \{\text{ekstenzivne igre}\} \to \{\text{strateške igre s funkcijami preferenc}\}$$
@@ -2381,7 +2383,7 @@ ravnovesje tako, da naredimo povratno indukcijo (dinamično programiranje) in od
   Prva firma pa zato izbere 
   $$\max_{q_1 \in [0, \infty)} u_1 (q_1, s_2 (q_1)) = \max_{q_2 \in [0, \infty)} q_1 \left(\left(P_{\max} - q_1 - \left(\frac{P_{\max} - c- q_1}{2}\right)_+\right)_+ - c\right).$$
   Če velja $P_{\max} - c - q_1 \geq 0$, potem je to enako 
-  $$\max_{q_1 \in [0, \infty)} \frac{1}{2} q_1 (P_{\max} - q_1).$$
+  $$\max_{q_1 \in [0, \infty)} \frac{1}{2} q_1 (P_{\max} - c - q_1).$$
   Ta funkcija pa ima maksimum pri $q_1 = \frac{P_{\max} - c}{2}$, za ta $q_1$ velja $P_{\max} - c - q_1 \geq 0$, torej 
   res ustreza pogojem. Če sedaj dobljeno vstavimo v funkcijo preferenc, dobimo 
   $$u_1\left(\frac{P_{\max} - c}{2}, \left(\frac{P_{\max} - c - \frac{P_{\max} - c}{2}}{2}\right)\right) = \frac{1}{8} (P_{\max} - c)^2 > 0.$$ 
@@ -3098,10 +3100,10 @@ za vse druge $S \subsetneq N$ pa določimo $v_{\Gamma} (S)$ kot največjo
 količino koristnosti, ki jo lahko zagotovi koalicija $S$ neodvisno od akcij koalicije $\tilde{S} = N \setminus S$.
 Formalno to naredimo z igro z vsoto nič, in sicer tako,
 da gledamo na $S$ kot na prvega igralca in $\tilde{S}$ kot na drugega igralca.
-Tako igralec $S$ kot tudi $\tilde{S}$ ima na voljo akcije $A_S = \prod{i \in S} A_i = A_{\tilde{S}}$. 
+Igralec $S$ ima na voljo akcije $A_S = \prod_{i \in S} A_i$, igralec $\tilde{S}$ pa $\prod_{i \in \tilde{S}} A_i = A_{\tilde{S}}$. 
 Definiramo funkcije koristnosti $u_S = \sum_{i \in S} u_i$ in $u_{\widetilde{S}} = -u_S$.
 Potem pa definiramo $v_{\Gamma}$ kot vrednost igre z vsoto nič 
-$\Gamma_S = (\{S, \tilde{S}\}, (A_S, A_S), (u_S, u_S))$.
+$\Gamma_S = (\{S, \tilde{S}\}, (A_S, A_{\tilde{S}}), (u_S, u_{\tilde{S}}))$.
 Vloga koalicije $\tilde{S}$ v igri je, da čim bolj moti $S$.
 Tako definirana $v_{\Gamma} (S)$ je varnostni nivo za koalicijo $S$; ta lahko zagotovi $v_{\Gamma} (S)$
 enot koristnosti. S tem smo definirali preslikavo $\Phi_{\text{kor $\to$ koal}} (\Gamma) = (N, v_{\Gamma})$.
@@ -3178,7 +3180,7 @@ $${\begin{tabular}{c|c|c|c|c|}
 $$
 Igra $\Gamma_{\{1, 2\}}$ ima sedlo pri $(Gd, B)$, zato je $v_{\Gamma} (\{1, 2\}) = 2$.
 Za izračunanje $v_\Gamma (\{3\})$ uporabimo dominacije in dobimo 
-$$v_\Gamma (\{3\}) v\left(\begin{bmatrix}
+$$v_\Gamma (\{3\}) = v\left(\begin{bmatrix}
   1 & 3 & 4 & 4\\
   3 & 2 & 4 & 4\\
   1 & 1 & 1 & 1
