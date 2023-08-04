@@ -270,17 +270,16 @@
 \newcommand{\ve}[1]{\overrightarrow{#1}}
 \newcommand{\vectors}[2]{\vec{{#1}_1},\vec{{#1}_2}, \dots \vec{{#1}_{#2}}}
 \newcommand{\scalars}[2]{{#1}_1, {#1}_2, \dots, {#1}_{#2}}
-\newcommand{\im}{\mathrm{im}\,}
-\newcommand{\rang}{\mathrm{\text{rang}}\,}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\rang}{rang}
 \newcommand{\isom}{\stackrel{\sim}{=}}
 \newcommand{\quot}[2]{{\raisebox{0.1em}{$#1$}\left/\raisebox{-0.2em}{$#2$}\right.}}
 \newcommand{\sprod}[2]{\left\langle {#1},{#2} \right\rangle}
-\newcommand{\cl}{\mathrm{Cl}\,}
-\newcommand{\inte}{\mathrm{Int}\,}
-\newcommand{\intem}{\mathrm{int}\,}
-\newcommand{\meja}{\mathrm{Meja}\,}
-\newcommand{\prob}{\mathbb{P}}
-\DeclareMathOperator{\di}{d\!}
+\DeclareMathOperator{\cl}{Cl}
+\DeclareMathOperator{\inte}{Int}
+\DeclareMathOperator{\intem}{int}
+\DeclareMathOperator{\meja}{Meja}
+\DeclareMathOperator{\prob}{\mathbb{P}}
 
 \newcommand{\forceindentnoparskip}{{%
   \setlength{\parskip}{0pt plus 0.1pt}%
@@ -385,7 +384,7 @@ V tem primeru je $A = \prod_{i \in [n]} A_i = A_1 \times A_2 \times \dots \times
             \hline
             m & 2, 2 & 0, 3\\
             \hline
-            p & 3, 0 & 2, 2\\
+            p & 3, 0 & 1, 1\\
             \hline
         \end{tabular}}        
     \end{center}
@@ -448,7 +447,7 @@ Tako lahko za $a = (a_1, \dots, a_n)$ in $b \in A_i$ pišemo $$u_i (a | b) = u_i
     strateška igra s funkcijo preferenc. Označimo $A = \prod_{i \in N}A_i$
     množica profilov akcij. Profil akcij $a^* = (a_i ^*)_{i \in N} \in A$
     je čisto Nashevo ravnovesje, če velja 
-    $$\forall i \in N,\ \forall b_i \in A_i:\ u_i (a^*) \geq u_i (a^* | b).$$
+    $$\forall i \in N,\ \forall b \in A_i:\ u_i (a^*) \geq u_i (a^* | b).$$
     Profil $a^*$ je strogo čisto Nashevo ravnovesje, če je v zgornjem izrazu stroga neenakost.
 \end{definicija}
 
@@ -639,7 +638,7 @@ Točke v preseku $C_1 \cap C_2$ so natanko Nasheva ravnovesja.
 
 \begin{definicija}
   Naj bo $(N, (A_i)_{i \in N}, (u_i)_{i \in N})$ strateška igra s funkcijami preferenc in $A = \prod_{i \in N} A_i$ 
-  množica profilov akcij. Akcija $b_i \in A_i$ (šibko) dobimira akcijo $c_i \in A_i$, če velja 
+  množica profilov akcij. Akcija $b_i \in A_i$ (šibko) dominira akcijo $c_i \in A_i$, če velja 
   $u_i (a | b_i) \geq u_i (a | c_i)$ za vsak $a \in A$ in $b_i$ strogo dominira $c_i$,
   če velja $u_i (a | b_i) > u_i (a | c_i)$ za vsak $a \in A$.
 \end{definicija}
@@ -1762,8 +1761,8 @@ Situacija je podobna kot uporaba dualnosti v linearnem programiranju.
   $$v \leq \widetilde{p}^\top A q \leq p^\top A q \leq p^\top A \widetilde{q} \leq v,$$
   torej je $p^\top A q = v.$ Sedaj pa smo dobili 
   $$\begin{cases}
-    \forall p' \in S_1:\ p'^\top Aq' \leq v\\
-    \forall q' \in S_2:\ p'^\top Aq' \geq v
+    \forall p' \in S_1:\ p'^\top Aq \leq v\\
+    \forall q' \in S_2:\ p^\top Aq' \geq v
   \end{cases},$$
   od koder pa sledi 
   $$\begin{cases}
@@ -2394,7 +2393,7 @@ ravnovesje tako, da naredimo povratno indukcijo (dinamično programiranje) in od
   in dobimo vgnezdeno Nashevo ravnovesje 
   $$\left(q_1 = \frac{P_{\max} - c}{2}, q_2 = \left(\frac{P_{\max} - c - q_1}{2}\right)_+\right).$$
   Pri vgnezdenem Nashevem ravnovesju bo $q_1 = \frac{P_{\max} - c}{2}$ in $q_2 = \frac{P_{\max} - c}{4}$, od koder dobimo 
-  $$u_1 = \frac{1}{8} (P_{\max} - c)^2,\quad u_2 = \frac{1}{16} (P_{\max})^2.$$
+  $$u_1 = \frac{1}{8} (P_{\max} - c)^2,\quad u_2 = \frac{1}{16} (P_{\max} - c)^2.$$
   To se tudi ujema z našo intuicijo, da bo prva firma (market leader)
   zaslužila več kot druga (market follower).
 \end{zgled}
@@ -2406,7 +2405,7 @@ ravnovesje tako, da naredimo povratno indukcijo (dinamično programiranje) in od
   (dobimo isto vgnezdeno Nashevo ravnovesje, kot če bi vzeli $(17 - q_1 - q_2)_+$).
   in stroški za $i$-to firmo:
   $$\begin{cases}
-    o;& q_i = 0\\
+    0;& q_i = 0\\
     q + q_i;& q_i > 0
   \end{cases},$$
   kjer $q > 0$ predstavlja začetne stroške.
@@ -3083,10 +3082,10 @@ imenuje preprosto koalicija.
 \end{zgled}
 
 Koalicijska igra $(N, v)$ je superaditivna, če velja 
-$$\forall S, T \subseteq N,\ S \cap T:\ v(S \cup T) \geq v(S) + v(T).$$
+$$\forall S, T \subseteq N,\ S \cap T = \emptyset:\ v(S \cup T) \geq v(S) + v(T).$$
 Igra iz prvega zgleda ni superaditivna, iz drugega pa je.
 Podobno pravimo, da je koalicijska igra $(N, v)$ subaditivna, če velja 
-$$\forall S, T \subseteq N,\ S \cap T:\ v(S \cup T) \leq v(S) + v(T).$$
+$$\forall S, T \subseteq N,\ S \cap T = \emptyset:\ v(S \cup T) \leq v(S) + v(T).$$
 Tokrat pa ni nobena od zgornjih iger subaditivna.
 
 \subsection{Iz strateške v koalicijsko obliko}
@@ -3222,7 +3221,7 @@ Vpeljimo še nekaj osnovnih konceptov: vektor plačil $(x_i)_{i \in N} \in \R^N$
 je skupno racionalen, če velja $\sum_{i \in N} x_i = v(N)$, in individualno racionalen,
 če velja $x_i \geq v(\{i\})$ za vsak $i \in N$.
 Imputacija pa je vektor plačil, ki je skupno in individualno racionalen.
-Množico vseh možnih imputacij igre $\Gamma(N, v)$ je 
+Množica vseh možnih imputacij igre $\Gamma(N, v)$ je 
 $$I(\Gamma) = \{(x_i)_{i \in N}\ |\ \forall i \in N:\ x_i \geq v(\{i\}) \wedge \sum_{i \in N} x_i = v(N)\}.$$
 Če je igra superaditivna, potem je $I(\Gamma) \neq \emptyset$.
 To je res, saj zaradi superaditivnosti velja 
@@ -3280,12 +3279,12 @@ ki bo zadoščala določenim lastnostim. Tem pravimo aksiomi.
 
 \begin{aksiom}[A2]
   Simetrija:
-  $$\forall v:\ \forall i, j \in N,\ i \neq j:\ \forall S \subseteq N\setminus \{i, j\}:\ v(S \cup \{i\}) = v (S \cup \{j\}) \Rightarrow \Phi_i (v) = \Phi_j (v).$$ 
+  $$\forall v:\ \forall i, j \in N,\ i \neq j:\ \left(\forall S \subseteq N\setminus \{i, j\}:\ v(S \cup \{i\}) = v (S \cup \{j\}) \right) \Rightarrow \Phi_i (v) = \Phi_j (v).$$ 
 \end{aksiom}
 
 \begin{aksiom}[A3]
   Dummy player:  
-  $$\forall v:\ \forall i \in N:\ \forall S \subseteq N \setminus \{i\}:\ v(S) = v(S \cup \{i\}) \Rightarrow \Phi_i (v) = 0.$$
+  $$\forall v:\ \forall i \in N:\ \left(\forall S \subseteq N \setminus \{i\}:\ v(S) = v(S \cup \{i\}) \right) \Rightarrow \Phi_i (v) = 0.$$
 \end{aksiom}
 
 \begin{aksiom}[A4]
@@ -3362,7 +3361,7 @@ Sedaj definiramo
   in igralca $i, j \in N$, za katera velja 
   $$\forall S \subseteq N \setminus \{i, j\}:\ v(S \cup \{i\}) = v(S \cup \{j\}).$$
   Potem velja 
-  $$v(N(\pi, i)) - v(N(\pi, i) \setminus \{i\}) = v(N(\pi_{ij}, j)) - v(N(\pi_{ij}, i) \setminus \{j\})$$
+  $$v(N(\pi, i)) - v(N(\pi, i) \setminus \{i\}) = v(N(\pi_{ij}, j)) - v(N(\pi_{ij}, j) \setminus \{j\})$$
   in posledično
   $$\forall \pi \in S_n: \Delta(v, \pi, i) = \Delta(v, \pi_{ij}, j).$$
   Ker $\pi_{ij}$ iterira skozi množico vseh permutacij $S_n$, velja naslednje:
@@ -3401,14 +3400,14 @@ Za izračun Shapleyeve vrednosti $\Phi_i (v)$ si lahko pomagamo z naslednjo trdi
 
 \begin{dokaz}
   Naj bo $i \in N$ poljuben igralec. Potem za podano $S \subseteq N \setminus \{i\}$
-  obstaja $|S|! (n - |S| - 1)!$ permutacij $\pi$, za katere je $N(\pi, i) = S$.
+  obstaja $|S|! (n - |S| - 1)!$ permutacij $\pi$, za katere je $N(\pi, i) = S \cup \{i\}$.
   Za vsako tako permutacijo je $\Delta(v, \pi, i) = v(S \cup \{i\}) - v(S)$.
   Potem pa iz definicije dobimo 
   \begin{align*}
     \Phi_i (v) &= \frac{1}{n!} \sum_{\pi \in S_n} \Delta(v, \pi, i)\\
-    &= \sum_{n \subseteq N \setminus \{i\}} \sum_{\pi \in S_n,\ N(\pi, i) = S} \Delta(v, \pi, i)\\
-    &= \sum_{n \subseteq N \setminus \{i\}} \sum_{\pi \in S_n,\ N(\pi, i) = S} (v(S \cup \{i\}) - v(S))\\
-    &= \sum_{S \subseteq N \setminus \{i\}} \frac{|S|! (n - |S| - 1)!}{n!} (v(S \cup \{i\}) - v(S)). 
+    &= \frac{1}{n!} \sum_{S \subseteq N \setminus \{i\}} \sum_{\pi \in S_n,\ N(\pi, i) = S} \Delta(v, \pi, i)\\
+    &= \frac{1}{n!} \sum_{S \subseteq N \setminus \{i\}} \sum_{\pi \in S_n,\ N(\pi, i) = S} (v(S \cup \{i\}) - v(S))\\
+    &= \sum_{S \subseteq N \setminus \{i\}} \frac{|S|! (n - |S| - 1)!}{n!} (v(S \cup \{i\}) - v(S)). \qedhere
   \end{align*}
 \end{dokaz}
 
@@ -3417,7 +3416,7 @@ Za izračun Shapleyeve vrednosti $\Phi_i (v)$ si lahko pomagamo z naslednjo trdi
 \end{trditev}
 
 \begin{dokaz}
-  Prostor karakterističnih funkcij $v: 2^N \to \R$ je realen vektorski prostor dimenzije $s^N - 1$,
+  Prostor karakterističnih funkcij $v: 2^N \to \R$ je realen vektorski prostor dimenzije $2^N - 1$,
   saj je izomorfen $\R^{2^N \setminus \{\emptyset\}}$.
   Za vsako koalicijo $S \subseteq N$ definiramo karakteristično funkcijo
   $$v_S (T) = \begin{cases}
